@@ -1,0 +1,88 @@
+ol{
+	grid-area: ol;
+	font-size: 30px;
+}
+nav > ul{
+	list-style-type: none;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.artistsida{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 2fr 1fr 4fr 5%;
+	grid-template-areas:
+	"nav nav nav"
+	". header ."
+	"main img ol"
+	"footer footer footer";
+}
+.startsida{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 2fr 1fr 4fr 5%;
+	grid-template-areas: 
+	"nav nav nav"
+	". header ."
+	"main . img"
+	"footer footer footer";
+}
+header{
+	grid-area: header;
+	text-align: center;
+}
+ul li a{
+	color: #000000; /*Färgen ska vara svart*/
+	text-align: center; /*Texten ska vara i mitten*/
+	text-decoration: none; /*Tar bort all text decoration*/
+	font-size: 30px; /*Text storleken ska vara 30px*/
+	display: block; /* Displayar block runt listan*/
+	line-height: 80px;  /* Blocken ska vara 100px höga*/ 
+}
+ul li a:hover{
+	font-size: 40px
+}
+nav{
+	grid-area: nav;
+}
+.svenskflagga{
+	width: 500px;
+	height: 300px
+}
+.lokalul{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	line-height: 40px;
+}
+ul{
+	border: 1px solid black;
+	border-radius: 100px;
+}
+
+main{
+	grid-area: main;
+	font-size: 20px;
+	text-align: center;
+	margin: auto;
+}
+img{
+	grid-area: img;
+	width: 400px;
+	height: 400px;
+}
+footer{
+	grid-area: footer;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	border: 2px solid black;
+}
+footer p{
+	display: block;
+}
+body{
+	background: -webkit-linear-gradient(white, grey);
+}
