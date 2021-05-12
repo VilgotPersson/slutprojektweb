@@ -1,6 +1,5 @@
 ol{
 	grid-area: ol;
-	font-size: 30px;
 }
 nav > ul{
 	list-style-type: none;
@@ -18,6 +17,7 @@ nav > ul{
 	"main img ol"
 	"footer footer footer";
 }
+/*Skapar ett grid och namnger de olika rutorna som skapas*/
 .startsida{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -28,29 +28,48 @@ nav > ul{
 	"main . img"
 	"footer footer footer";
 }
+/*Ger namnet som de olika rutorna har till table i detta fallet*/
+table{
+	grid-area: ol;
+	border-collapse: collapse;
+}
+table, th, td{
+	border: 1px solid black;
+}
+tr:nth-child(even){
+	background-color: rgb(60, 179, 80);
+}
+tr:nth-child(odd){
+	background-color: rgb(58, 120, 36);
+}
 header{
 	grid-area: header;
 	text-align: center;
 }
 ul li a{
-	color: #000000; /*Färgen ska vara svart*/
-	text-align: center; /*Texten ska vara i mitten*/
-	text-decoration: none; /*Tar bort all text decoration*/
-	font-size: 30px; /*Text storleken ska vara 30px*/
-	display: block; /* Displayar block runt listan*/
-	line-height: 80px;  /* Blocken ska vara 100px höga*/ 
+	color: #000000;
+	text-align: center;
+	text-decoration: none; 
+	display: block;
+	line-height: 80px; 
+}
+ul li a:link{
+	font-size: 30px;
+	color: rgb(0, 0, 255);
+}
+ul li a:visited{
+	color:hsl(273, 100%, 50%);
 }
 ul li a:hover{
-	font-size: 40px
+	font-size: 3em;
+}
+ul li a:active{
+	color:hsl(359, 74%, 27%);
 }
 nav{
 	grid-area: nav;
 }
-.svenskflagga{
-	width: 500px;
-	height: 300px
-}
-.lokalul{
+#lokalul{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
@@ -60,7 +79,12 @@ ul{
 	border: 1px solid black;
 	border-radius: 100px;
 }
-
+label{
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+	width: 120px;
+}
 main{
 	grid-area: main;
 	font-size: 20px;
@@ -69,6 +93,10 @@ main{
 }
 img{
 	grid-area: img;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 	width: 400px;
 	height: 400px;
 }
@@ -83,6 +111,6 @@ footer{
 footer p{
 	display: block;
 }
-body{
+body, footer{
 	background: -webkit-linear-gradient(white, grey);
 }

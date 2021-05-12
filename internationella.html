@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-	<html lang="sv">
-		<head>	
-			<title>Internationella artister</title>
-			<link href="style.css" rel="stylesheet">
-			<meta charset="UTF-8">
-		</head>
-		<body class="startsida">
-			<header>
-				<h1>Internationella Artister</h1>
-			</header>
-			<nav>
-				<ul>
-					<li><a href="index.html">Startsida</a></li>
-					<li><a href="svenska.html">Svenska artiser</a></li>
-					<li><a href="internationella.html">Internationella artister</a></li>
-				</ul>
-				<ul>
-					<li><a href="macklemore.html">Macklemore</a></li>
-					<li><a href="coldplay.html">Coldplay</a></li>
-					<li><a href="weekend.html">The Weeknd</a></li>
-				</ul>
-			</nav>
-			<main>
-				<form action="/action_page.php">
-					<input type="checkbox" id="Bil" name="Cykel" value="Bil">
-					<label for="vehicle1">Jag har en bil</label><br>
-					<input type="checkbox" id="Cykel" name="Cykel" value="Cykel">
-					<label for="vehicle2"> Jag har en cykel</label><br>
-					<input type="checkbox" id="Båt" name="Båt" value="Båt">
-					<label for="vehicle3">Jag har en båt</label><br><br>
-					<input type="submit" value="Submit">
-				</form> 
-			</main>
-			<img class="svenskflagga" src="https://assets.partyking.org/img/products/1300/pappassietter-internationella-flaggor-1.jpg" alt="Ett internationellt jordklot">
-			<footer>
-				<p>Vilgot Persson</p> 
-				<p>Teknikum</p> 
-				<p>29/4-2021</p>
-			</footer>
-		</body>
-	</html>
+<html lang="sv">
+	<head>	
+		<title>Internationella artister</title>
+		<link href="style.css" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+	<body class="startsida">
+		<header>
+			<h1>Internationella Artister</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Startsida</a></li>
+				<li><a href="svenska.html">Svenska artiser</a></li>
+				<li><a href="internationella.html">Internationella artister</a></li>
+			</ul>
+			<ul>
+				<li lang="en"><a href="macklemore.html">Macklemore</a></li>
+				<li lang="en"><a href="coldplay.html">Coldplay</a></li>
+				<li lang="en"><a href="weekend.html">The Weeknd</a></li>
+			</ul>
+		</nav>
+		<main>
+		<!--Man får logga in och komma tillbaka till index.html-->
+			<form action="index.html" method="post">
+				<p>
+					<label for="un">Användarnamn:</label>
+					<input name="username" id="un" required />
+				</p>
+				<p>
+					<label for="pw">Lösenord:</label>
+					<input name="password" type="password" id="pw" required />
+				</p>
+				<p>
+					<input type="submit" value="Logga in"/>
+				</p>
+			</form>
+		</main>
+		<img src="https://assets.partyking.org/img/products/1300/pappassietter-internationella-flaggor-1.jpg" alt="Ett internationellt jordklot">
+		<footer>
+			<p>Vilgot Persson</p> 
+			<p>Teknikum</p> 
+			<p>29/4-2021</p>
+		</footer>
+	</body>
+</html>

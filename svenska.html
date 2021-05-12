@@ -1,42 +1,55 @@
 <!DOCTYPE html>
-	<html lang="sv">
-		<head>	
-			<title>Svenska Artister</title>
-			<link href="style.css" rel="stylesheet">
-			<meta charset="UTF-8">
-		</head>
-		<body class="startsida">
-			<header>
-				<h1>Svenska Artister</h1>
-			</header>
-			<nav>
-				<ul>
-					<li><a href="index.html">Startsida</a></li>
-					<li><a href="svenska.html">Svenska artiser</a></li>
-					<li><a href="internationella.html">Internationella artister</a></li>
-				</ul>
-				<ul>
-					<li><a href="veronica.html">Veronica Maggio</a></li>
-					<li><a href="timbuktu.html">Timbuktu</a></li>
-					<li><a href="lars.html">Lars Winnerbäck</a></li>
-				</ul>
-			</nav>
-			<main>
-				<form action="/action_page.php">
-					<input type="checkbox" id="Bil" name="Cykel" value="Bil">
-					<label for="vehicle1">Jag har en bil</label><br>
-					<input type="checkbox" id="Cykel" name="Cykel" value="Cykel">
-					<label for="vehicle2"> Jag har en cykel</label><br>
-					<input type="checkbox" id="Båt" name="Båt" value="Båt">
-					<label for="vehicle3">Jag har en båt</label><br><br>
-					<input type="submit" value="Submit">
-				</form> 
-			</main>
-			<img class="svenskflagga" src="https://grannliv.granngarden.se/wp-content/uploads/2013/05/Granngarden_morsdag_2.jpg" alt="En bild på svenska flaggan">
-			<footer>
-				<p>Vilgot Persson</p> 
-				<p>Teknikum</p> 
-				<p>29/4-2021</p>
-			</footer>
-		</body>
-	</html>
+<html lang="sv">
+	<head>	
+		<title>Svenska Artister</title>
+		<link href="style.css" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+	<body class="startsida">
+		<header>
+			<h1>Svenska Artister</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Startsida</a></li>
+				<li><a href="svenska.html">Svenska artiser</a></li>
+				<li><a href="internationella.html">Internationella artister</a></li>
+			</ul>
+			<!--Lokala menyn på svenska och internationella sidan-->
+			<ul>
+				<li><a href="veronica.html">Veronica Maggio</a></li>
+				<li><a href="timbuktu.html">Timbuktu</a></li>
+				<li><a href="lars.html">Lars Winnerbäck</a></li>
+			</ul>
+		</nav>
+		<main>
+			<!--Man får välja vilken artist man gilar mest och sen skicka in resultatet-->
+			<form action="svenska.html" method="post">
+			<fieldset>
+				<legend>Vilken artist gillar du mest?</legend>
+				<p>
+					<input type="radio" name="artist" value="Lars_Winnerbäck" id="Lars_Winnerbäck" />
+					<label for="Lars_Winnerbäck">Lars Winnerbäck</label>
+				</p>
+				<p>
+					<input type="radio" name="artist" value="Timbuktu" id="Timbuktu" />
+					<label for="Timbuktu">Timbuktu</label>
+				</p>
+				<p>
+					<input type="radio" name="artist" value="Veronica_Maggio" id="Veronica_Maggio" />
+					<label for="Veronica_Maggio">Veronica Maggio</label>
+				</p>
+				<p>
+					<input type="submit" value="Svara"/>
+				</p>
+			</fieldset>
+			</form>
+		</main>
+		<img src="https://grannliv.granngarden.se/wp-content/uploads/2013/05/Granngarden_morsdag_2.jpg" alt="En bild på svenska flaggan">
+		<footer>
+			<p>Vilgot Persson</p> 
+			<p>Teknikum</p> 
+			<p>29/4-2021</p>
+		</footer>
+	</body>	
+</html>
