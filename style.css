@@ -1,6 +1,12 @@
 ol{
 	grid-area: ol;
 }
+article{
+	grid-area: article;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
 nav > ul{
 	list-style-type: none;
 	display: grid;
@@ -25,7 +31,7 @@ nav > ul{
 	grid-template-areas: 
 	"nav nav nav"
 	". header ."
-	"main . img"
+	"main article img"
 	"footer footer footer";
 }
 /*Ger namnet som de olika rutorna har till table i detta fallet*/
