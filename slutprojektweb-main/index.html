@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>	
+		<title>Startsida</title>
+		<link href="style.css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<!--Ställer in Viewport på sidan så vi vet hur bred den är och kan använda det med @media screens-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="startsida">
+		<header>
+			<h1>Startsida</h1>
+		</header>
+		<!--Globala menyn-->
+		<nav>
+			<ul>
+				<li><a href="index.html">Startsida</a></li>
+				<li><a href="svenska.html">Svenska artiser</a></li>
+				<li><a href="internationella.html">Internationella artister</a></li>
+			</ul>
+		</nav>
+		<article>
+			<h2>En ljudfil</h2>
+			<!--audio controls gör så att webbläsarens egna kontroller för ljudfiler visas och kan användas-->
+			<audio controls>
+			<source src="ung_yako_-_min_vibe_utkast.wav" type="audio/wav">
+			</audio>
+			<!--iframe länkar till en youtube video-->
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> 
+		</article>
+		<main>
+			<section>
+				<h2>Om sidan</h2>
+				<p>
+					Detta är en sida om bra både svenska och internationella artister som du kanske kan få upp dina ögon för. På varje artists sida är mina favoritlåtar av den artisten och lite info om artisten.
+				</p>
+			</section>
+		</main>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Music_1_-_The_Noun_Project.svg/512px-Music_1_-_The_Noun_Project.svg.png" alt="En musiknot">
+		<footer>
+			<p>Vilgot Persson</p>
+			<p>Teknikum</p> 
+			<p>06/06-2021</p>
+		</footer>
+	</body>
+</html>

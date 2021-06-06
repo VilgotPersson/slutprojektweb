@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>	
+		<title>Internationella artister</title>
+		<link href="style.css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<!--Ställer in Viewport på sidan så vi vet hur bred den är och kan använda det med @media screens-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="startsida">
+		<header>
+			<h1>Internationella Artister</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Startsida</a></li>
+				<li><a href="svenska.html">Svenska artiser</a></li>
+				<li><a href="internationella.html">Internationella artister</a></li>
+			</ul>
+			<ul>
+				<li lang="en"><a href="macklemore.html">Macklemore</a></li>
+				<li lang="en"><a href="coldplay.html">Coldplay</a></li>
+				<li lang="en"><a href="weekend.html">The Weeknd</a></li>
+			</ul>
+		</nav>
+		<main>
+			<!--Form som förflyttar användaren till index.html med post metoden-->
+			<form action="index.html" method="post">
+				<div>
+					<!--En fråga om vad man tycker om sidan med fält för skriftliga svar-->
+					<label for="an">Vad tycker du om sidan?</label>
+					<textarea name="answer" id="an" placeholder="Skriv vad du tycker om sidan"></textarea>
+				</div>
+				<div>
+					<!--Fält för att mata in emailadressen-->
+					<label for="ma">Mail:</label>
+					<input name="mail" type="email" id="ma" placeholder="example@example.org" required />
+				</div>
+				<div>
+					<!--Fält för att mata in lösenord-->
+					<label for="pw">Lösenord:</label>
+					<input name="password" type="password" id="pw" required />
+				</div>
+				<div>
+					<!--Knapp som skickar iväg datan-->
+					<input type="submit" value="Logga in"/>
+				</div>
+			</form>
+		</main>
+			<dl>
+				<dt>Macklemore</dt>
+				<dd>Can't Hold Us</dd>
+				<dt>Coldplay</dt>
+				<dd>Something Just like This</dd>
+				<dt>The Weeknd</dt>
+				<dd>Blinding Lights</dd>
+			</dl>
+		<img src="https://assets.partyking.org/img/products/1300/pappassietter-internationella-flaggor-1.jpg" alt="Ett internationellt jordklot">
+		<footer>
+			<p>Vilgot Persson</p> 
+			<p>Teknikum</p> 
+			<p>29/4-2021</p>
+		</footer>
+	</body>
+</html>
