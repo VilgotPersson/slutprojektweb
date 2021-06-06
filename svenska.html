@@ -4,6 +4,8 @@
 		<title>Svenska Artister</title>
 		<link href="style.css" rel="stylesheet">
 		<meta charset="UTF-8">
+		<!--Ställer in Viewport på sidan så vi vet hur bred den är och kan använda det med @media screens-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body class="startsida">
 		<header>
@@ -15,7 +17,6 @@
 				<li><a href="svenska.html">Svenska artiser</a></li>
 				<li><a href="internationella.html">Internationella artister</a></li>
 			</ul>
-			<!--Lokala menyn på svenska och internationella sidan-->
 			<ul>
 				<li><a href="veronica.html">Veronica Maggio</a></li>
 				<li><a href="timbuktu.html">Timbuktu</a></li>
@@ -23,28 +24,91 @@
 			</ul>
 		</nav>
 		<main>
-			<!--Man får välja vilken artist man gilar mest och sen skicka in resultatet-->
+			<!-- Form för att svara på frågor och användaren skickas tillbaka till svenska.html med metoden post-->
 			<form action="svenska.html" method="post">
 			<fieldset>
+				<!--Titel vilken är din favoritfärg? -->
+				<label for="co">Vilken är din favoritfärg?</label>
+				<!-- Man får välja en färg-->
+				<input type="color" name="color" value="#e00000" id="co">
+			</fieldset>
+			
+			<fieldset>
+				<!--Titeln Hur gammal är du?-->
+				<label for="1g">Hur gammal är du?</label>
+				<!--Man får välja ett nummer-->
+				<input type="number" name="age" value="20" id="1g"/>
+			</fieldset>
+			<fieldset>
+				<!--Titeln för fieldsetet Vilken/vilka låtar gillar du-->
+				<legend>Vilken/vilka låtar gillar du?</legend>
+				<div>
+					<!--3 Svarsalternativ med typen checkbox vilket gör att man kan ha flera atlernativ checkade samtidigt-->
+					<input type="checkbox" name="song" value="Jag_kommer" id="Jag_kommer"/>
+					<label for="Jag_kommer">Jag kommer</label>
+				</div>
+				<div>
+					<input type="checkbox" name="song" value="Granit_Morän" id="Granit_Morän"/>
+					<label for="Granit_Morän">Granit och Morän</label>
+				</div>
+				<div>
+					<input type="checkbox" name="song" value="Resten" id="Resten"/>
+					<label for="Resten">Resten av ditt liv</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<!--Titeln för fieldsetet Vilken artist gillar du mest?-->
 				<legend>Vilken artist gillar du mest?</legend>
-				<p>
+				<div>
+					<!--3 svarsalternativ med typen radio vilket gör att man bara kan ha en checkad-->
 					<input type="radio" name="artist" value="Lars_Winnerbäck" id="Lars_Winnerbäck" />
 					<label for="Lars_Winnerbäck">Lars Winnerbäck</label>
-				</p>
-				<p>
+				</div>
+				<div>
 					<input type="radio" name="artist" value="Timbuktu" id="Timbuktu" />
 					<label for="Timbuktu">Timbuktu</label>
-				</p>
-				<p>
-					<input type="radio" name="artist" value="Veronica_Maggio" id="Veronica_Maggio" />
+				</div>
+				<div>
+					<input type="radio" name="artist" value="Veronica_Maggio" id="Veronica_Maggio"/>
 					<label for="Veronica_Maggio">Veronica Maggio</label>
-				</p>
-				<p>
+				</div>
+				<div>
+					<!--Knapp som skickar iväg datan-->
 					<input type="submit" value="Svara"/>
-				</p>
+				</div>
 			</fieldset>
 			</form>
 		</main>
+		<table>
+			<caption>Artisterna med några låtar</caption>
+			<thead>
+				<tr>
+					<!--th scope visar om det är kolumnerna eller raderna som det är th för-->
+					<th scope="col">Veronica Maggio</th>
+					<th scope="col">Timbuktu</th>
+					<th scope="col">Lars Winnerbäck</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Jag kommer</td>
+					<td>Resten av ditt liv</td>
+					<td>Granit och morän</td>
+			</tr>
+				<tr>
+					<td>Snälla bli min</td>
+					<td>Annie Liebovitz</td>
+					<td>Elegi</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>2021</td>
+					<td>06</td>
+					<td>06</td>
+				</tr>
+			</tfoot>
+		</table>
 		<img src="https://grannliv.granngarden.se/wp-content/uploads/2013/05/Granngarden_morsdag_2.jpg" alt="En bild på svenska flaggan">
 		<footer>
 			<p>Vilgot Persson</p> 
