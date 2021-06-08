@@ -170,7 +170,7 @@ footer p{
 
 /*Gruppselektor för body och footer, skapar en gradient från vit till grå på båda två*/
 body, footer{
-	background: -webkit-linear-gradient(white, grey);
+	background: linear-gradient(white, grey);
 }
 
 /*Typselektor för iframe, Ändrär bredden till 420px och höjden till 315px*/
@@ -179,6 +179,11 @@ iframe{
 	height: 315px;
 }
 
+/*Typselektor för svg. Ändrar bredden och höjden till 100px vardera*/
+svg{
+	width: 100px;
+	height: 100px;
+}
 /*Gör så att om sidan visas på mobila enheter som är under 750px breda så blir h1-taggens text 20px stor.*/
 @media screen and (max-width: 750px){
 
