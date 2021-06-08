@@ -11,6 +11,7 @@
 	"main article img"
 	"footer footer footer";
 }
+
 /*klassselektor för alla taggar med klassen artistsida*/
 .artistsida{
 	/*Skapar grid som gör ter spalter och 4 rader*/
@@ -24,23 +25,28 @@
 	"main img ol"
 	"footer footer footer";
 }
+
 /*Barnselektor för a under li under ul*/
 ul li a:link{
 	font-size: 30px;
 	color: rgb(0, 0, 255);
 }
+
 /*Barnselektor för a under li under ul när länken har varit besökt så ändrar den färg*/
 ul li a:visited{
 	color:hsl(273, 100%, 50%);
 }
+
 /*Barnselektor för a under li under ul när man har musen över länken så ändras storleken till 3em*/
 ul li a:hover{
 	font-size: 3em;
 }
+
 /*Barnselektor för a under li under ul, om man trycker och håller nere på länken så är den aktiv och då ändras färgen för att lättare förstå detta*/
 ul li a:active{
 	color:hsl(359, 74%, 27%);
 }
+
 /*Barnselektor för ul under nav skapas en grid med 3 kolumner och punkterna som vanligtvis följer med ul tas bort*/
 nav > ul{
 	list-style-type: none;
@@ -48,35 +54,42 @@ nav > ul{
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 }
+
 /*typselektor för nav, kopplar ihop html-taggen nav med grid arean nav*/
 nav{
 	grid-area: nav;
 }
+
 /*Typselektor för dl, kopplar ihop html-taggen dl med grid arean article, margin auto gör så att den placeras i mitten av det grid-utrymmet. Ändrar textstorleken till 4ex*/
 dl{
 	grid-area: article;
 	margin: auto;
 	font-size: 4ex
 }
+
 /*Typselektor för caption, ändrar textstorleken till 5ex*/
 caption{
 	font-size: 5ex;
 }
+
 /*typselektor för ol, kopplar ihop html-taggen ol med grid arean ol*/
 ol{
 	grid-area: ol;
 }
+
 /*typselektor för article, kopplar ihop html-taggen article med grid arean article. Sätter den i mitten av sin grid area med margin: auto. Texten centreras*/
 article{
 	grid-area: article;
 	margin: auto;
 	text-align: center;
 }
+
 /*Typselektor för table. Där det är fler än en angränsande borders i tabellen blir de till en. Kopplar samman html-taggen men grid arean article*/
 table{
 	border-collapse: collapse;
 	grid-area: article;
 }
+
 /*gruppselektor för table, th och td. Alla ska ha en border på 1px som ska vara hel och svart. Texten centreras horisontellt och flyttas upp vertikalt padding är 10px vilket innebär att texten inte är precis ute i kanten av tabellen*/
 table, th, td{
 	border: 1px solid black;
@@ -84,20 +97,24 @@ table, th, td{
 	text-align: center;
 	padding: 10px;
 }
+
 /*Dessa gör så att tabellen får zebra-striping*/
 /*typselektor för th. Ändrar färgen på alla th*/
 th{
 	background-color: rgb(247, 247, 247)
 }
+
 /*Avkommlingsselektor för varannan tr ska färgen ändras*/
 tr:nth-child(even){
 	background-color: rgb(247, 247, 247)
 }
+
 /*Typselektor för header. kopplar ihop html-taggen header med grid arean header. Texten centreras*/
 header{
 	grid-area: header;
 	text-align: center;
 }
+
 /*Barnselektor för a under li under ul. Färgen ändras, Texten centreras, Tar bort den ursprungliga dekorationen för länkar, Skapar ett block som gör att de tar upp maximal yta på bredden, Blocket ska vara 80px högt*/
 ul li a{
 	color: #000000;
@@ -106,17 +123,20 @@ ul li a{
 	display: block;
 	line-height: 80px; 
 }
+
 /*Id selektor för alla taggar med id lokalul. Skapar grid med fyra kolumner och en rad. */
 #lokalul{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
 }
+
 /*Typselektor för ul. Skapar ram runt alla ul, Skapar rundade hörn*/
 ul{
 	border: 1px solid black;
 	border-radius: 100px;
 }
+
 /*Typselektor för main. Kopplar ihop html-taggen main med grid arean main. Ändrar textstorleken till 20px. Texten centreras och main centreras i sin grid ruta.*/
 main{
 	grid-area: main;
@@ -124,6 +144,7 @@ main{
 	text-align: center;
 	margin: auto;
 }
+
 /*Typselektor för img. Koppplar ihop html-taggen img med grid arean img. Gör så att bilden centreras, bredden blir 400px och höjden 400px*/
 img{
 	grid-area: img;
@@ -131,6 +152,7 @@ img{
 	width: 400px;
 	height: 400px;
 }
+
 /*Typselektor för footer, kopplar ihop html-taggen footer med grid arean footer, Gör ett ny grid med ter kolumner, texten centreras och skapar en ram med 2px som är hel och svart*/
 footer{
 	grid-area: footer;
@@ -140,14 +162,23 @@ footer{
 	text-align: center;
 	border: 2px solid black;
 }
+
 /*Barnselektor för p under footer, gör så att p taggarna tar upp maximal bredd så att de hamnar fint på sidan*/
 footer p{
 	display: block;
 }
+
 /*Gruppselektor för body och footer, skapar en gradient från vit till grå på båda två*/
 body, footer{
 	background: -webkit-linear-gradient(white, grey);
 }
+
+/*Typselektor för iframe, Ändrär bredden till 420px och höjden till 315px*/
+iframe{
+	width: 420px; 
+	height: 315px;
+}
+
 /*Gör så att om sidan visas på mobila enheter som är under 750px breda så blir h1-taggens text 20px stor.*/
 @media screen and (max-width: 750px){
 
